@@ -1,0 +1,13 @@
+<div *ngIf="car">
+  <h2>Id: {{car.id}}</h2>
+  <div>
+    <label for="car-make">Car make: </label>
+    <input id="car-make" [(ngModel)]="car.make" placeholder="make">
+    <br>
+    <label for="car-model">Car model: </label>
+    <input id="car-model" [(ngModel)]="car.model" placeholder="model">
+    <br>
+    <label for="car-make">Car mileage: </label>
+    <input id="car-make" [(ngModel)]="car.mileage" placeholder="mileage">
+  </div>
+</div>
