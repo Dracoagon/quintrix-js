@@ -1,13 +1,11 @@
 <h2>My Cars</h2>
 <ul class="cars">
   <li *ngFor="let car of cars">
-    <button [class.selected]="car === selectedCar" type="button" (click)="onSelect(car)">
+    <a routerLink="/detail/{{car.id}}">
       <span class="badge">{{car.id}}</span>
-      <span class="make">{{car.make}}</span>
+      <span class="make">{{car.make}} </span>
       <span class="model">{{car.model}}</span>
-    </button>
+    </a>
   </li>
 </ul>
-
-<app-car-details [car]="selectedCar"></app-car-details>
 
