@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.angular",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\car-details",
+    "\\src\\app\\cars",
+    "\\src\\app\\dashboard",
+    "\\src\\app\\messages",
+    "\\src\\assets",
+    "\\src\\environments"
+  ],
+  "SelectedNode": "\\src\\app\\car-details\\car-details.component.html",
+  "PreviewInSolutionExplorer": false
+}

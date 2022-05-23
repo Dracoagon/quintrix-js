@@ -22,4 +22,20 @@ export class CarsComponent implements OnInit {
   getCars(): void {
     this.carService.getCars().subscribe(cars => this.cars = cars);
   }
+
+  delete(car: Car): void {
+    this.cars = this.cars.filter(c => c !== car);
+    this.carService.deleteCar(car.id).subscribe();
+  }
+
+  add(make: string, model: string, mileageStr: string): void {
+    make = make.trim();
+    model = model.trim();
+    let mileage = +mileageStr;
+    if (!make || !model) { return; }
+    this.carService.addCar({ make, model, mileage } as Car).subscribe(car => {
+      this.cars.push(car);
+
+    });
+  }
 }

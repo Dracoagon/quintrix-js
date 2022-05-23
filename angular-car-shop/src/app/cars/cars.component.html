@@ -6,6 +6,23 @@
       <span class="make">{{car.make}} </span>
       <span class="model">{{car.model}}</span>
     </a>
+    <button type="button" class="delete" title="delete car"
+            (click)="delete(car)">x</button>
   </li>
 </ul>
+
+<div>
+  <label for="new-car-make">Car Make: </label>
+  <input id="new-car-make" #carMake />
+  <label for="new-car-model">Car Model: </label>
+  <input id="new-car-model" #carModel />
+  <label for="new-car-mileage">Car Mileage: </label>
+  <input id="new-car-mileage" #carMileage />
+
+  <button type="button" class="add-button" (click)="add(
+          carMake.value, carModel.value, carMileage.value);
+          carMake.value=''; carModel.value=''; carMileage.value=''">
+    Add Car
+  </button>
+</div>
 

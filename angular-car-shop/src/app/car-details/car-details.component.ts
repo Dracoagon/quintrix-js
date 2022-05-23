@@ -28,4 +28,10 @@ export class CarDetailsComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+
+  save(): void {
+    if (this.car) {
+      this.carService.updateCar(this.car).subscribe(() => this.goBack());
+    }
+  }
 }
