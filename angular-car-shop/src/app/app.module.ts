@@ -11,6 +11,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { InMemoryDataService } from './in-memory-data.service';
+import { CarSearchComponent } from './car-search/car-search.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { InMemoryDataService } from './in-memory-data.service';
     CarsComponent,
     CarDetailsComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    CarSearchComponent
   ],
   imports: [
     BrowserModule,

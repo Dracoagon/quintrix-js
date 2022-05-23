@@ -67,6 +67,19 @@ export class CarService {
     );
   }
 
+/** GET cars whose name contains search term */
+  searchCars(term: string): Observable<Car[]> {
+    if (!term.trim()) {
+      return of([]);
+    }
+    return this.http.get<Car[]>(`${this.carsUrl}/?model=${term}`).pipe(
+      tap(x => x.length ?
+        this.log(`found cars matching "${term}"`) :
+        this.log(`no cars matching "${term}"`)),
+      catchError(this.handleError<Car[]>('searchCars', []))
+    );
+  }
+
   /**
    * Handle Http operation that failed.
    * Let the app continue.
